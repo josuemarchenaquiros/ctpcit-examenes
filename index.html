@@ -135,38 +135,38 @@
 
     <div class="section-title">Exámenes Trimestrales Académicos I Trimestre</div>
     <div class="button-group">
-      <button disabled class="exam-button" onclick="redirectTo('ciencias')">
+      <button  class="exam-button" onclick="redirectTo('ciencias')">
         <i class="bi bi-virus"></i> Ciencias
       </button>
       <button class="exam-button" onclick="redirectTo('vgfc')">
         <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('logico')">
+      <button  class="exam-button" onclick="redirectTo('logico')">
         <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('toeic')">
+      <button  class="exam-button" onclick="redirectTo('toeic')">
         <i class="bi bi-translate"></i> TOEIC
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('lenguaje')">
+      <button  class="exam-button" onclick="redirectTo('lenguaje')">
         <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
       </button>
     </div>
 
     <div class="section-title">Exámenes Trimestrales Técnicos I Trimestre</div>
     <div class="button-group">
-      <button disabled class="exam-button" onclick="redirectTo('software')">
+      <button  class="exam-button" onclick="redirectTo('software')">
         <i class="bi bi-code-slash"></i> Informática en Desarrollo del Software
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('ciberseguridad')">
+      <button  class="exam-button" onclick="redirectTo('ciberseguridad')">
         <i class="bi bi-shield-lock"></i> Ciberseguridad
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('electronica')">
+      <button  class="exam-button" onclick="redirectTo('electronica')">
         <i class="bi bi-cpu"></i> Electrónica Industrial
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('diseno')">
+      <button  class="exam-button" onclick="redirectTo('diseno')">
         <i class="bi bi-palette"></i> Diseño y Desarrollo Digital
       </button>
-      <button disabled class="exam-button" onclick="redirectTo('logistica')">
+      <button  class="exam-button" onclick="redirectTo('logistica')">
         <i class="bi bi-truck"></i> Administración, Logística y Distribución
       </button>
     </div>
@@ -176,16 +176,16 @@
   <script>
     function redirectTo(exam) {
       const urls = {
-        ciencias: "https://forms.office.com/r/F6371m7hMM?origin=lprLink,'_blank'",
-        vgfc: "https://forms.office.com/r/tQxNN3SD50?origin=lprLink",
-        logico: "https://forms.office.com/r/wMrp4YN3qi?origin=lprLink",
-        toeic: "https://forms.office.com/r/NZiU11RjWW?origin=lprLink",
-        lenguaje: "https://forms.office.com/r/6e8pF6W7cZ?origin=lprLink",
-        software: "https://forms.office.com/r/SirHUGh85L?origin=lprLink",
-        ciberseguridad: "https://forms.office.com/r/HFSae6vHTy?origin=lprLink",
-        electronica: "https://forms.office.com/r/EHzZkZ501u?origin=lprLink",
-        diseno: "https://forms.office.com/r/vGscMwFvSD?origin=lprLink",
-        logistica: "https://forms.office.com/r/gaVXsx1Yjx?origin=lprLink"
+        ciencias: "#",
+        vgfc: "#",
+        logico: "#",
+        toeic: "#",
+        lenguaje: "#",
+        software: "#",
+        ciberseguridad: "https://forms.office.com/r/Y9zJJ7dWdD",
+        electronica: "#",
+        diseno: "#",
+        logistica: "#"
       };
       const url = urls[exam];
 
