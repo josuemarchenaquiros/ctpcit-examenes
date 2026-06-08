@@ -104,6 +104,14 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
+    .especifica {
+      background-color: rgb(43, 55, 226);
+    }
+
+    .especifica:hover {
+      background-color: rgb(43, 55, 226);
+    }
+
     @media (min-width: 600px) {
       .button-group {
         flex-direction: row;
@@ -121,7 +129,7 @@
 <body>
   <header>
     <!-- Cambia esta imagen por el logo de tu institución -->
-<!--
+    <!--
     <img src="https://complejoeducativocit.ed.cr/wp-content/uploads/2021/03/Logo-cit-contacto.jpg"
       alt="Logo Institucional">
 -->
@@ -130,31 +138,37 @@
   <div class="container">
     <div class="titles">
       <h1>Pruebas Trimestrales 12° - I Trimestre</h1>
-      <h2>Selecciona el examen que corresponda al día y hora</h2>
+      <h2>Seleccione únicamente el examen que corresponda según el día y la hora asignados, así como el tipo de prueba:
+        ordinaria o específica.</h2>
     </div>
 
-    <div class="section-title">Exámenes Trimestrales Académicos I Trimestre</div>
+    <!--<div class="section-title">Exámenes Trimestrales Académicos I Trimestre</div>-->
     <div class="button-group">
+      <!--
       <button class="exam-button" onclick="redirectTo('ciencias')">
         <i class="bi bi-virus"></i> Ciencias
       </button>
       <button class="exam-button" onclick="redirectTo('vgfc')">
         <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
       </button>
-      <button  class="exam-button" onclick="redirectTo('logico')">
-        <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
+      -->
+      <button class="exam-button" onclick="redirectTo('logico')">
+        <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático ORDINARIA
       </button>
-      <button  class="exam-button" onclick="redirectTo('logicoEspecifica')">
+      <button class="exam-button especifica" onclick="redirectTo('logicoEspecifica')">
         <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático ESPECÍFICA
       </button>
+      <!--
       <button  class="exam-button" onclick="redirectTo('toeic')">
         <i class="bi bi-translate"></i> TOEIC
       </button>
       <button  class="exam-button" onclick="redirectTo('lenguaje')">
         <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
       </button>
+      -->
     </div>
 
+    <!--
     <div class="section-title">Exámenes Trimestrales Técnicos I Trimestre</div>
     <div class="button-group">
       <button  class="exam-button" onclick="redirectTo('software')">
@@ -173,9 +187,10 @@
         <i class="bi bi-truck"></i> Administración, Logística y Distribución
       </button>
     </div>
+    -->
   </div>
 
-  
+
   <script>
     function redirectTo(exam) {
       const urls = {
