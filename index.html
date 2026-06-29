@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pruebas Trimestrales 12° - I Trimestre</title>
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluaciones 12° - II Trimestre</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
     <style>
       body {
         margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f0f2f5;
       }
-  
+
       header {
         display: flex;
         flex-direction: column;
@@ -21,29 +25,31 @@
         padding: 30px 20px 10px 20px;
         background-color: #107c65;
       }
-  
+
       header img {
         height: 100px;
         margin-bottom: 15px;
       }
-  
+
       .titles {
         text-align: center;
         margin-top: 30px;
         margin-bottom: 20px;
+        padding: 0 15px;
       }
-  
+
       .titles h1 {
         font-size: 2.2rem;
         margin-bottom: 10px;
         color: #2ba98e;
       }
-  
+
       .titles h2 {
         font-size: 1.4rem;
         color: #3a3a3a;
+        font-weight: normal;
       }
-  
+
       .section-title {
         text-align: center;
         font-size: 1.6rem;
@@ -51,17 +57,18 @@
         margin-top: 40px;
         margin-bottom: 10px;
         color: #0a5545;
+        padding: 0 15px;
       }
-  
+
       .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        min-height: 100vh;
+        min-height: calc(100vh - 130px);
         padding-bottom: 60px;
       }
-  
+
       .button-group {
         display: flex;
         flex-direction: column;
@@ -69,9 +76,11 @@
         width: 100%;
         max-width: 600px;
         margin-top: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
       }
-  
-      .exam-button {
+
+      .option-button {
         padding: 18px 25px;
         font-size: 1.3rem;
         font-weight: bold;
@@ -81,139 +90,295 @@
         color: white;
         cursor: pointer;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.2s ease,
+          background-color 0.3s ease,
+          box-shadow 0.3s ease;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
       }
-  
-      .exam-button i {
+
+      .option-button i {
         font-size: 1.4rem;
       }
-  
-      .exam-button:hover {
-        background-color: #2ba98e;
+
+      .option-button:hover {
+        background-color: #238f79;
         transform: scale(1.05);
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
       }
-  
-      .exam-button:active {
+
+      .option-button:active {
         transform: scale(0.97);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       }
-  
+
       @media (min-width: 600px) {
         .button-group {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: center;
         }
-        .exam-button {
+
+        .option-button {
           flex: 1 1 45%;
         }
       }
-    </style>
-</head>
-<body>
-    <header>
-        <!-- Cambia esta imagen por el logo de tu institución -->
-        <img src="https://complejoeducativocit.ed.cr/wp-content/uploads/2025/08/Complejo-Educativo-CIT.png" alt="Logo Institucional">
-      </header>
-    
-      <div class="container">
-        <div class="titles">
-          <h1>Pruebas Trimestrales 12° - I Trimestre</h1>
-          <h2>Selecciona el examen que corresponda al día y hora</h2>
-        </div>
-    
-        <div class="section-title">Exámenes Trimestrales Académicos I Trimestre</div>
-        <div class="button-group">
-          <button class="exam-button" onclick="redirectTo('ciencias')">
-            <i class="bi bi-virus"></i> Ciencias
-          </button>
-          <button class="exam-button" onclick="redirectTo('vgfc')">
-            <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
-          </button>
-          <button class="exam-button" onclick="redirectTo('logico')">
-            <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
-          </button>
-          <button class="exam-button" onclick="redirectTo('toeic')">
-            <i class="bi bi-translate"></i> TOEIC
-          </button>
-          <button class="exam-button" onclick="redirectTo('lenguaje')">
-            <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
-          </button>
-        </div>
 
-                <div class="section-title">Exámenes Trimestrales Específicos Académicos I Trimestre</div>
-        <div class="button-group">
-          <button class="exam-button" onclick="redirectTo('cienciasE')">
-            <i class="bi bi-virus"></i> Ciencias
-          </button>
-          <button class="exam-button" onclick="redirectTo('vgfcE')">
-            <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
-          </button>
-          <button class="exam-button" onclick="redirectTo('logicoE')">
-            <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
-          </button>
-          <button class="exam-button" onclick="redirectTo('toeicE')">
-            <i class="bi bi-translate"></i> TOEIC
-          </button>
-          <button class="exam-button" onclick="redirectTo('lenguajeE')">
-            <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
-          </button>
-        </div>
-    
-        <div class="section-title">Exámenes Trimestrales Técnicos I Trimestre</div>
-        <div class="button-group">
-          <button class="exam-button" onclick="redirectTo('software')">
-            <i class="bi bi-code-slash"></i> Informática en Desarrollo del Software
-          </button>
-          <button class="exam-button" onclick="redirectTo('ciberseguridad')">
-            <i class="bi bi-shield-lock"></i> Ciberseguridad
-          </button>
-          <button class="exam-button" onclick="redirectTo('electronica')">
-            <i class="bi bi-cpu"></i> Electrónica Industrial
-          </button>
-          <button class="exam-button" onclick="redirectTo('diseno')">
-            <i class="bi bi-palette"></i> Diseño y Desarrollo Digital
-          </button>
-          <button class="exam-button" onclick="redirectTo('logistica')">
-            <i class="bi bi-truck"></i> Administración, Logística y Distribución
-          </button>
-        </div>
-      </div>
-    
-
-    
-      <script>
-        function redirectTo(exam) {
-          const urls = {
-            ciencias: "https://forms.office.com/r/AcMGgRr1Bs?origin=lprLink",
-            vgfc: "https://forms.office.com/r/64UerD5SYS?origin=lprLink",
-            logico: "https://forms.office.com/r/cygvg0MJhB?origin=lprLink",
-            toeic: "https://forms.cloud.microsoft/r/Mq8DEyAFGk?origin=lprLink",
-            lenguaje: "https://forms.office.com/r/4Mvykf4DhU?origin=lprLink",
-            cienciasE: "https://forms.office.com/r/JTSB3px8Ra?origin=lprLink",
-            vgfcE: "https://forms.office.com/r/8pvdMFxiYG?origin=lprLink",
-            logicoE: "https://forms.office.com/r/cDwBz5mwaW?origin=lprLink",
-            lenguajeE: "https://forms.office.com/r/4Mvykf4DhU?origin=lprLink",
-            software: "",
-            ciberseguridad: "https://forms.office.com/r/hJgQE1Lnf5",
-            electronica: "",
-            diseno: "",
-            logistica: ""
-          };
-          const url = urls[exam];
-
-  if (url) {
-    window.open(url, "_blank"); // Abre en una nueva pestaña
-  } else {
-    alert("Examen no disponible.");
-  }
-
+      @media (max-width: 480px) {
+        .titles h1 {
+          font-size: 1.8rem;
         }
-      </script>
-</body>
+
+        .titles h2 {
+          font-size: 1.1rem;
+        }
+
+        .section-title {
+          font-size: 1.3rem;
+        }
+
+        .option-button {
+          font-size: 1.1rem;
+          padding: 16px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="https://complejoeducativocit.ed.cr/wp-content/uploads/2025/08/Complejo-Educativo-CIT.png"
+        alt="Logo Institucional"
+      />
+    </header>
+
+    <main
+      class="container"
+      data-page-title="Quizzes 12° - II Trimestre"
+      data-unavailable-message="El quiz seleccionado aún no se encuentra disponible."
+    >
+      <div class="titles">
+        <h1>Quizzes 12° - II Trimestre</h1>
+        <h2>
+          Seleccione el quiz correspondiente al día y la hora establecidos
+        </h2>
+      </div>
+
+      <div class="section-title">Quizzes Académicos</div>
+
+      <div class="button-group">
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('ciencias')"
+        >
+          <i class="bi bi-virus"></i> Ciencias
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('vgfc')"
+        >
+          <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('logico')"
+        >
+          <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('toeic')"
+        >
+          <i class="bi bi-translate"></i> TOEIC
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('lenguaje')"
+        >
+          <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
+        </button>
+      </div>
+
+      <div class="section-title">Quizzes Técnicos</div>
+
+      <div class="button-group">
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('software')"
+        >
+          <i class="bi bi-code-slash"></i> Informática en Desarrollo del
+          Software
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('ciberseguridad')"
+        >
+          <i class="bi bi-shield-lock"></i> Ciberseguridad
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('electronica')"
+        >
+          <i class="bi bi-cpu"></i> Electrónica Industrial
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('diseno')"
+        >
+          <i class="bi bi-palette"></i> Diseño y Desarrollo Digital
+        </button>
+
+        <button
+          type="button"
+          class="option-button"
+          onclick="redirectTo('logistica')"
+        >
+          <i class="bi bi-truck"></i> Administración, Logística y Distribución
+        </button>
+      </div>
+    </main>
+
+    <!--
+    <main
+      class="container"
+      data-page-title="Pruebas Parciales 12° - II Trimestre"
+      data-unavailable-message="El examen seleccionado aún no se encuentra disponible."
+    >
+      <div class="titles">
+        <h1>Pruebas Parciales 12° - II Trimestre</h1>
+        <h2>Seleccione el examen correspondiente al día y la hora establecidos</h2>
+      </div>
+
+      <div class="section-title">Exámenes Académicos</div>
+
+      <div class="button-group">
+        <button type="button" class="option-button" onclick="redirectTo('ciencias')">
+          <i class="bi bi-virus"></i> Ciencias
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('vgfc')">
+          <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('logico')">
+          <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('toeic')">
+          <i class="bi bi-translate"></i> TOEIC
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('lenguaje')">
+          <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
+        </button>
+      </div>
+
+      <div class="section-title">Exámenes Específicos Académicos</div>
+
+      <div class="button-group">
+        <button type="button" class="option-button" onclick="redirectTo('cienciasE')">
+          <i class="bi bi-virus"></i> Ciencias
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('vgfcE')">
+          <i class="bi bi-globe"></i> Visión Global y Formación Ciudadana
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('logicoE')">
+          <i class="bi bi-calculator"></i> Razonamiento Lógico-Matemático
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('toeicE')">
+          <i class="bi bi-translate"></i> TOEIC
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('lenguajeE')">
+          <i class="bi bi-chat-text"></i> Comunicación y Lenguaje
+        </button>
+      </div>
+
+      <div class="section-title">Exámenes Técnicos</div>
+
+      <div class="button-group">
+        <button type="button" class="option-button" onclick="redirectTo('software')">
+          <i class="bi bi-code-slash"></i> Informática en Desarrollo del Software
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('ciberseguridad')">
+          <i class="bi bi-shield-lock"></i> Ciberseguridad
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('electronica')">
+          <i class="bi bi-cpu"></i> Electrónica Industrial
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('diseno')">
+          <i class="bi bi-palette"></i> Diseño y Desarrollo Digital
+        </button>
+
+        <button type="button" class="option-button" onclick="redirectTo('logistica')">
+          <i class="bi bi-truck"></i> Administración, Logística y Distribución
+        </button>
+      </div>
+    </main>
+    -->
+
+    <script>
+      const urls = {
+        ciencias: "",
+        vgfc: "",
+        logico: "",
+        toeic: "",
+        lenguaje: "",
+
+        cienciasE: "",
+        vgfcE: "",
+        logicoE: "",
+        toeicE: "",
+        lenguajeE: "",
+
+        software: "",
+        ciberseguridad: "",
+        electronica: "",
+        diseno: "",
+        logistica: "",
+      };
+
+      const activePage = document.querySelector("main.container");
+
+      if (activePage && activePage.dataset.pageTitle) {
+        document.title = activePage.dataset.pageTitle;
+      }
+
+      function redirectTo(option) {
+        const url = urls[option];
+
+        if (url) {
+          window.open(url, "_blank", "noopener,noreferrer");
+        } else {
+          alert(activePage.dataset.unavailableMessage);
+        }
+      }
+    </script>
+  </body>
 </html>
