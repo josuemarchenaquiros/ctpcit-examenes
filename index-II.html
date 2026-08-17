@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1AA69A">
+
+  <title>Pruebas Sumativas Técnicas | CIT</title>
+
+  <link rel="icon" href="img/icono-cit.ico" type="image/png">
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Configuración de carreras, niveles, subáreas y URLs -->
+  <script src="js/exam-config-II.js"></script>
+
+  <style>
+    :root {
+      --turquoise: #1AA69A;
+      --turquoise-dark: #087E73;
+      --turquoise-deep: #05665E;
+      --turquoise-light: #DDF4F0;
+      --turquoise-soft: #F0FAF8;
+
+      --gold: #DDB84F;
+      --gold-dark: #B98A18;
+      --gold-light: #F7E6A5;
+
+      --brown: #461E14;
+      --cream: #F7F6E9;
+      --white: #FFFFFF;
+
+      --text: #294542;
+      --muted: #70817F;
+
+      --shadow: 0 8px 24px rgba(8, 126, 115, .12);
+      --shadow-hover: 0 14px 32px rgba(8, 126, 115, .20);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding-bottom: 72px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 5% 10%, rgba(26,166,154,.08), transparent 27%),
+        radial-gradient(circle at 95% 30%, rgba(221,184,79,.10), transparent 25%),
+        linear-gradient(135deg, #fff 0%, var(--cream) 100%);
+    }
+
+    button {
+      font: inherit;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button, a, img {
+      -webkit-user-drag: none;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 25px 18px 30px;
+      color: white;
+      background: linear-gradient(135deg, var(--turquoise-deep), var(--turquoise));
+      box-shadow: 0 5px 25px rgba(8,126,115,.23);
+    }
+
+    header::before,
+    header::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    header::before {
+      width: 380px;
+      height: 380px;
+      left: -180px;
+      top: -280px;
+      background: rgba(255,255,255,.08);
+    }
+
+    header::after {
+      width: 330px;
+      height: 330px;
+      right: -160px;
+      bottom: -260px;
+      background: rgba(255,255,255,.07);
+    }
+
+    .gold-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(
+        90deg,
+        var(--gold-dark),
+        var(--gold-light),
+        var(--gold),
+        var(--gold-light),
+        var(--gold-dark)
+      );
+    }
+
+    .logo {
+      position: relative;
+      z-index: 1;
+      width: 160px;
+      max-width: 58vw;
+      display: block;
+      margin: 0 auto 12px;
+      filter: drop-shadow(0 7px 10px rgba(0,0,0,.24));
+      transition: transform .25s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.04);
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(1.65rem, 4vw, 2.4rem);
+      font-weight: 800;
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin: 7px 0 0;
+      color: #edfffd;
+      font-size: 1rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 32px auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .intro h2 {
+      margin: 0 0 7px;
+      color: var(--turquoise-dark);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ---------- BREADCRUMB ---------- */
+
+    .breadcrumb {
+      display: none;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(26,166,154,.15);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .breadcrumb.active {
+      display: flex;
+    }
+
+    .breadcrumb .current {
+      color: var(--turquoise-dark);
+      font-weight: 800;
+    }
+
+    /* ---------- CAREERS ---------- */
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .career-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 112px;
+      padding: 20px;
+      border: 2px solid rgba(26,166,154,.13);
+      border-radius: 18px;
+      background: rgba(255,255,255,.96);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .career-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--turquoise);
+      transform: scaleY(0);
+      transition: transform .22s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(26,166,154,.48);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .career-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .career-card:active {
+      transform: scale(.97);
+    }
+
+    .career-icon {
+      flex: 0 0 65px;
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      color: white;
+      background: linear-gradient(135deg, var(--turquoise), var(--turquoise-dark));
+      box-shadow: 0 7px 15px rgba(8,126,115,.20);
+      font-size: 1.9rem;
+      transition: transform .2s ease;
+    }
+
+    .career-card:hover .career-icon {
+      transform: scale(1.07) rotate(-3deg);
+    }
+
+    .career-info {
+      flex: 1;
+    }
+
+    .career-info h3 {
+      margin: 0 0 5px;
+      color: var(--turquoise-dark);
+      font-size: 1.08rem;
+      line-height: 1.25;
+    }
+
+    .career-info span {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .career-arrow {
+      color: var(--gold-dark);
+      font-size: 1.35rem;
+      transition: transform .2s ease;
+    }
+
+    .career-card:hover .career-arrow {
+      transform: translateX(5px);
+    }
+
+    /* ---------- NAVIGATION PANEL ---------- */
+
+    .navigation-panel {
+      display: none;
+      padding: 24px;
+      border-radius: 22px;
+      border: 1px solid rgba(26,166,154,.17);
+      border-top: 6px solid var(--turquoise);
+      background: rgba(255,255,255,.98);
+      box-shadow: var(--shadow-hover);
+      animation: appear .32s ease;
+    }
+
+    .navigation-panel.active {
+      display: block;
+    }
+
+    .panel-heading {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .panel-heading h2 {
+      margin: 0 0 6px;
+      color: var(--turquoise-dark);
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+    }
+
+    .panel-heading h2 i {
+      color: var(--gold-dark);
+      margin-right: 6px;
+    }
+
+    .panel-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ---------- LEVELS ---------- */
+
+    .level-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    .level-card {
+      min-height: 115px;
+      border: 2px solid transparent;
+      border-radius: 16px;
+      color: white;
+      background: linear-gradient(135deg, var(--turquoise), var(--turquoise-dark));
+      box-shadow: 0 7px 16px rgba(8,126,115,.18);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .level-card i {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 2rem;
+    }
+
+    .level-card strong {
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    .level-card small {
+      display: block;
+      margin-top: 3px;
+      opacity: .88;
+    }
+
+    .level-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(8,126,115,.25);
+    }
+
+    .level-card:active {
+      transform: scale(.95);
+    }
+
+    .level-card.active {
+      color: var(--brown);
+      border-color: var(--gold);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    }
+
+    /* ---------- SUBAREAS ---------- */
+
+    .subarea-panel {
+      display: none;
+      animation: slideUp .3s ease;
+    }
+
+    .subarea-panel.active {
+      display: block;
+    }
+
+    .subarea-heading {
+      text-align: center;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 14px;
+      color: var(--turquoise-dark);
+      background: var(--turquoise-soft);
+      border: 1px solid rgba(26,166,154,.17);
+    }
+
+    .subarea-heading h3 {
+      margin: 0 0 4px;
+      font-size: 1.15rem;
+    }
+
+    .subarea-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .subarea-heading i {
+      color: var(--gold-dark);
+      margin-right: 5px;
+    }
+
+    .subarea-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .subarea-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 78px;
+      padding: 15px;
+      border: 2px solid #DCEBE8;
+      border-radius: 15px;
+      background: white;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(8,126,115,.06);
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .subarea-btn:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 9px 18px rgba(8,126,115,.13);
+    }
+
+    .subarea-btn:active {
+      transform: scale(.95);
+    }
+
+    .subarea-icon {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      color: white;
+      background: var(--turquoise);
+      font-size: 1.2rem;
+    }
+
+    .subarea-name {
+      flex: 1;
+      font-weight: 750;
+      line-height: 1.25;
+    }
+
+    .subarea-arrow {
+      color: var(--gold-dark);
+    }
+
+    .subarea-btn.not-configured {
+      opacity: .62;
+    }
+
+    /* ---------- ACTIONS ---------- */
+
+    .panel-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 23px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 10px;
+      color: var(--turquoise-dark);
+      background: var(--turquoise-light);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      background: var(--gold-light);
+      color: var(--brown);
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 12px 10px;
+      text-align: center;
+      color: #EDFFFD;
+      background: var(--turquoise-dark);
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 -4px 14px rgba(8,126,115,.15);
+      font-size: .86rem;
+    }
+
+    /* ---------- ANIMATIONS ---------- */
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- TRIMESTRES ---------- */
+    .trimester-menu {
+      width: min(1120px, 92%);
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .trimester-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 18px;
+      border: 2px solid rgba(26,166,154,.18);
+      border-radius: 999px;
+      color: var(--turquoise-dark);
+      background: rgba(255,255,255,.96);
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(8,126,115,.08);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+    }
+
+    .trimester-link:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      background: var(--gold-light);
+      color: var(--brown);
+    }
+
+    .trimester-link.active {
+      color: white;
+      border-color: var(--turquoise-dark);
+      background: var(--turquoise);
+      box-shadow: 0 7px 16px rgba(8,126,115,.18);
+    }
+
+    .trimester-link:active {
+      transform: scale(.95);
+    }
+
+    /* ---------- SECCIONES ---------- */
+    .section-panel {
+      display: none;
+      margin-bottom: 24px;
+      animation: slideUp .3s ease;
+    }
+
+    .section-panel.active {
+      display: block;
+    }
+
+    .section-card {
+      min-height: 115px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 800px) {
+      .career-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .level-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .subarea-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 94%;
+        margin: 24px auto;
+      }
+
+      .navigation-panel {
+        padding: 17px 13px;
+      }
+
+      .career-card {
+        padding: 16px;
+      }
+
+      .career-icon {
+        flex-basis: 56px;
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem;
+      }
+
+      .career-info h3 {
+        font-size: 1rem;
+      }
+
+      .logo {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+
+<body
+  oncontextmenu="return false"
+  ondragstart="return false"
+  onselectstart="return false"
+>
+
+<header>
+  <a href="index.html" aria-label="Ir al inicio de la plataforma">
+    <img
+      src="img/logo-cit.png"
+      class="logo"
+      alt="Escudo institucional CIT"
+    >
+  </a>
+
+  <h1>Pruebas Sumativas Técnicas</h1>
+  <p>Selecciona la carrera técnica para comenzar</p>
+
+  <div class="gold-line"></div>
+</header>
+
+<nav class="trimester-menu" aria-label="Selección de trimestre">
+  <a class="trimester-link active" data-trimester="I" href="index.html"><i class="bi bi-1-circle"></i> I Trimestre</a>
+  <a class="trimester-link" data-trimester="II" href="index-II.html"><i class="bi bi-2-circle"></i> II Trimestre</a>
+  <a class="trimester-link" data-trimester="III" href="index-III.html"><i class="bi bi-3-circle"></i> III Trimestre</a>
+</nav>
+
+<main class="container">
+
+  <div id="breadcrumb" class="breadcrumb">
+    <span><i class="bi bi-house"></i> Inicio</span>
+    <i class="bi bi-chevron-right"></i>
+    <span id="breadcrumbCareer"></span>
+    <i id="breadcrumbLevelArrow" class="bi bi-chevron-right" style="display:none;"></i>
+    <span id="breadcrumbLevel" class="current" style="display:none;"></span>
+    <i id="breadcrumbSectionArrow" class="bi bi-chevron-right" style="display:none;"></i>
+    <span id="breadcrumbSection" class="current" style="display:none;"></span>
+  </div>
+
+  <section id="careerView">
+    <div class="intro">
+      <h2>Selecciona una carrera técnica</h2>
+      <p>Elige la carrera para consultar sus niveles académicos y pruebas.</p>
+    </div>
+
+    <div id="careerGrid" class="career-grid"></div>
+  </section>
+
+  <section id="navigationPanel" class="navigation-panel">
+
+    <div class="panel-heading">
+      <h2 id="careerTitle"></h2>
+      <p>Selecciona el nivel académico de la prueba sumativa</p>
+    </div>
+
+    <div id="levelGrid" class="level-grid"></div>
+
+    <section id="sectionPanel" class="section-panel">
+      <div class="subarea-heading">
+        <h3><i class="bi bi-people"></i> Selecciona la sección</h3>
+        <p id="selectedSection"></p>
+      </div>
+      <div id="sectionGrid" class="level-grid"></div>
+    </section>
+
+    <section id="subareaPanel" class="subarea-panel">
+      <div class="subarea-heading">
+        <h3>
+          <i class="bi bi-journal-check"></i>
+          Selecciona la subárea de la prueba
+        </h3>
+        <p id="selectedLevel"></p>
+      </div>
+
+      <div id="subareaGrid" class="subarea-grid"></div>
+    </section>
+
+    <div class="panel-actions">
+      <button id="backButton" class="back-btn" type="button">
+        <i class="bi bi-arrow-left"></i>
+        Volver a carreras
+      </button>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © 2026 Complejo Educativo CIT | Plataforma de Pruebas Sumativas
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
