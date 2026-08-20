@@ -84,7 +84,7 @@ const examConfig = {
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Sistemas modernos de manufactura, control y calidad", icon: "bi-gear-wide-connected", url: "https://forms.cloud.microsoft/r/ymgaWkwBcd?origin=lprLink" },
+          { name: "Sistemas modernos de manufactura, control y calidad", icon: "bi-gear-wide-connected", url: "https://forms.cloud.microsoft/r/VEM20Xu2TT?origin=lprLink" },
           { name: "Diagnóstico industrial", icon: "bi-clipboard-data", url: "https://forms.cloud.microsoft/r/viSiw6wc0x?origin=lprLink" }
         ]
       }
