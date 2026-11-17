@@ -1,5 +1,5 @@
 
-
+/*
 const examConfig = {
   electronica: {
     name: "Electrónica Industrial",
@@ -213,3 +213,4 @@ const examConfig = {
     }
   }
 };
+*/
