@@ -209,7 +209,12 @@ function renderSubareas(subareas) {
 
 function openExam(url) {
   if (!url || !url.trim()) {
-    alert("Esta subárea todavía no tiene una prueba configurada.");
+  Swal.fire({
+  title: "Esta subárea todavía no tiene una prueba configurada.",
+  icon: "info",
+  draggable: true
+});
+    //alert("Esta subárea todavía no tiene una prueba configurada.");
     return;
   }
   window.open(url, "_blank", "noopener,noreferrer");
