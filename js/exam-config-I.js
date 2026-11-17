@@ -17,7 +17,7 @@
  * ocultar realmente las URLs. Para seguridad real se necesita backend.
  * ================================================================
  */
-
+/*
 const examConfig = {
   electronica: {
     name: "Electrónica Industrial",
@@ -230,4 +230,4 @@ const examConfig = {
       }
     }
   }
-};
+};*/
