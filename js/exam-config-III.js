@@ -119,7 +119,7 @@ const examConfig = {
             name: "10-A",
             subareas: [
               { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/7w8if68HZN?origin=lprLink" },
-              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/BRZkUGvVF9?origin=lprLink" },
+              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/NqnW4q00h2?origin=lprLink" },
               { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "https://forms.cloud.microsoft/r/a4X3ZrvsC6?origin=lprLink" }
             ]
           },
@@ -127,7 +127,7 @@ const examConfig = {
             name: "10-B",
             subareas: [
               { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/vsu29Pn5dT?origin=lprLink" },
-              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/BRZkUGvVF9?origin=lprLink" },
+              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/NqnW4q00h2?origin=lprLink" },
               { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "https://forms.cloud.microsoft/r/a4X3ZrvsC6?origin=lprLink" }
             ]
           }
