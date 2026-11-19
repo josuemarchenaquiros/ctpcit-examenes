@@ -25,18 +25,18 @@ const examConfig = {
       decimo: {
         name: "Décimo",
         subareas: [
-          { name: "TICs", icon: "bi-pc-display", url: "" },
-          { name: "Instalaciones eléctricas", icon: "bi-lightning-charge", url: "" },
-          { name: "Semiconductores", icon: "bi-cpu", url: "" }
+          { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/QMvmLwFpJF?origin=lprLink" },
+          { name: "Instalaciones eléctricas", icon: "bi-lightning-charge", url: "https://forms.cloud.microsoft/r/VNy2a84G1E?origin=lprLink" },
+          { name: "Semiconductores", icon: "bi-cpu", url: "https://forms.cloud.microsoft/r/Bf4yMtWHHR?origin=lprLink" }
         ]
       },
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Electrónica Analógica", icon: "bi-broadcast-pin", url: "" },
-          { name: "Automatismo Industrial", icon: "bi-gear-wide-connected", url: "" },
-          { name: "Electrónica Digital", icon: "bi-motherboard", url: "" },
-          { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+          { name: "Electrónica Analógica", icon: "bi-broadcast-pin", url: "https://forms.cloud.microsoft/r/R2qWSSTDwR?origin=lprLink" },
+          { name: "Automatismo Industrial", icon: "bi-gear-wide-connected", url: "https://forms.cloud.microsoft/r/s2UCNzhbNt?origin=lprLink" },
+          { name: "Electrónica Digital", icon: "bi-motherboard", url: "https://forms.cloud.microsoft/r/9xdKZd0mzr?origin=lprLink" },
+          { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/aZFSHGbrDY?origin=lprLink" }
         ]
       }
     }
@@ -57,10 +57,10 @@ const examConfig = {
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Programación", icon: "bi-code-slash", url: "" },
-          { name: "Introducción a la inteligencia artificial y redes de dispositivos", icon: "bi-robot", url: "" },
-          { name: "Bases de Datos", icon: "bi-database", url: "" },
-          { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+          { name: "Programación", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/NzhE8tmpeW?origin=lprLink" },
+          { name: "Introducción a la inteligencia artificial y redes de dispositivos", icon: "bi-robot", url: "https://forms.cloud.microsoft/r/YFQSguRiVC?origin=lprLink" },
+          { name: "Bases de Datos", icon: "bi-database", url: "https://forms.cloud.microsoft/r/jp4XYUL0Xu?origin=lprLink" },
+          { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/hnUQESZ9Av?origin=lprLink" }
         ]
       }
     }
@@ -72,18 +72,18 @@ const examConfig = {
       decimo: {
         name: "Décimo",
         subareas: [
-          { name: "Compras", icon: "bi-cart-check", url: "" },
-          { name: "Importaciones y Exportaciones", icon: "bi-globe2", url: "" },
-          { name: "Logística", icon: "bi-truck", url: "" }
+          { name: "Compras", icon: "bi-cart-check", url: "https://forms.cloud.microsoft/r/N2yK46nmKZ?origin=lprLink" },
+          { name: "Importaciones y Exportaciones", icon: "bi-globe2", url: "https://forms.cloud.microsoft/r/Ym8RRQw0yT?origin=lprLink" },
+          { name: "Logística", icon: "bi-truck", url: "https://forms.cloud.microsoft/r/Ym8RRQw0yT?origin=lprLink" }
         ]
       },
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Logística", icon: "bi-truck", url: "" },
-          { name: "Administración de Inventarios", icon: "bi-box-seam", url: "" },
-          { name: "Operaciones de manufactura", icon: "bi-buildings", url: "" },
-          { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+          { name: "Logística", icon: "bi-truck", url: "https://forms.cloud.microsoft/r/c9twwq0Wk2?origin=lprLink" },
+          { name: "Administración de Inventarios", icon: "bi-box-seam", url: "https://forms.cloud.microsoft/r/YLkVrau56Z?origin=lprLink" },
+          { name: "Operaciones de manufactura", icon: "bi-buildings", url: "https://forms.cloud.microsoft/r/CUKUY9inY8?origin=lprLink" },
+          { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/dZq36wDzqS?origin=lprLink" }
         ]
       }
     }
@@ -95,15 +95,15 @@ const examConfig = {
       decimo: {
         name: "Décimo",
         subareas: [
-          { name: "Control y garantía de calidad", icon: "bi-check2-circle", url: "" },
-          { name: "Sistemas modernos de manufactura, control y calidad", icon: "bi-gear-wide-connected", url: "" }
+          { name: "Control y garantía de calidad", icon: "bi-check2-circle", url: "https://forms.cloud.microsoft/r/GZKczyPjB0?origin=lprLink" },
+          { name: "Sistemas modernos de manufactura, control y calidad", icon: "bi-gear-wide-connected", url: "https://forms.cloud.microsoft/r/fM9t9idP4r?origin=lprLink" }
         ]
       },
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Sistemas modernos de manufactura, control y calidad", icon: "bi-gear-wide-connected", url: "" },
-          { name: "Diagnóstico industrial", icon: "bi-clipboard-data", url: "" }
+          { name: "Sistemas modernos de manufactura, control y calidad", icon: "bi-gear-wide-connected", url: "https://forms.cloud.microsoft/r/HhJrTdSaeA?origin=lprLink" },
+          { name: "Diagnóstico industrial", icon: "bi-clipboard-data", url: "https://forms.cloud.microsoft/r/zRGymsqHje?origin=lprLink" }
         ]
       }
     }
@@ -118,17 +118,17 @@ const examConfig = {
           {
             name: "10-A",
             subareas: [
-              { name: "TICs", icon: "bi-pc-display", url: "" },
-              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "" },
-              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "" }
+              { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/7w8if68HZN?origin=lprLink" },
+              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/BRZkUGvVF9?origin=lprLink" },
+              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "https://forms.cloud.microsoft/r/a4X3ZrvsC6?origin=lprLink" }
             ]
           },
           {
             name: "10-B",
             subareas: [
-              { name: "TICs", icon: "bi-pc-display", url: "" },
-              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "" },
-              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "" }
+              { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/vsu29Pn5dT?origin=lprLink" },
+              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/BRZkUGvVF9?origin=lprLink" },
+              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "https://forms.cloud.microsoft/r/a4X3ZrvsC6?origin=lprLink" }
             ]
           }
         ]
@@ -139,17 +139,17 @@ const examConfig = {
           {
             name: "11-A",
             subareas: [
-              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "" },
-              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "" },
-              { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/zzhr7vWSmh?origin=lprLink" },
+              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "https://forms.cloud.microsoft/r/dPjaSFiSNr?origin=lprLink" },
+              { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/62KVzz9PGX?origin=lprLink" }
             ]
           },
           {
             name: "11-C",
             subareas: [
-              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "" },
-              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "" },
-              { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+              { name: "Programación y prueba de la seguridad del software", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/mpqWVrBuqW?origin=lprLink" },
+              { name: "Operaciones ciberseguras", icon: "bi-shield-lock", url: "https://forms.cloud.microsoft/r/WnXZy7HEbN?origin=lprLink" },
+              { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/dZq36wDzqS?origin=lprLink" }
             ]
           }
         ]
@@ -163,9 +163,9 @@ const examConfig = {
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Programación", icon: "bi-code-slash", url: "" },
-          { name: "Técnicas para diseño publicitario", icon: "bi-megaphone", url: "" },
-          { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+          { name: "Programación", icon: "bi-code-slash", url: "https://forms.cloud.microsoft/r/ARWHZsvAF0?origin=lprLink" },
+          { name: "Técnicas para diseño publicitario", icon: "bi-megaphone", url: "https://forms.cloud.microsoft/r/bezXH14TL7?origin=lprLink" },
+          { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/2xGVxrTGcd?origin=lprLink" }
         ]
       }
     }
@@ -185,9 +185,9 @@ const examConfig = {
       undecimo: {
         name: "Undécimo",
         subareas: [
-          { name: "Desarrollo de aplicaciones móviles y bases de datos", icon: "bi-phone", url: "" },
-          { name: "Soporte y seguridad de aplicaciones móviles", icon: "bi-shield-check", url: "" },
-          { name: "Emprendimiento", icon: "bi-lightbulb", url: "" }
+          { name: "Desarrollo de aplicaciones móviles y bases de datos", icon: "bi-phone", url: "https://forms.cloud.microsoft/r/ewwN0VAYC1?origin=lprLink" },
+          { name: "Soporte y seguridad de aplicaciones móviles", icon: "bi-shield-check", url: "https://forms.cloud.microsoft/r/ZPyutxgvDs?origin=lprLink" },
+          { name: "Emprendimiento", icon: "bi-lightbulb", url: "https://forms.cloud.microsoft/r/vvH1YCRJ6B?origin=lprLink" }
         ]
       }
     }
@@ -202,19 +202,19 @@ const examConfig = {
           {
             name: "10-C",
             subareas: [
-              { name: "Principios y técnicas de diseño gráfico", icon: "bi-brush", url: "" },
-              { name: "Diseño gráfico digital", icon: "bi-vector-pen", url: "" },
-              { name: "Diseño de la Imagen", icon: "bi-image", url: "" },
-              { name: "TICs", icon: "bi-pc-display", url: "" }
+              { name: "Principios y técnicas de diseño gráfico", icon: "bi-brush", url: "https://forms.cloud.microsoft/r/csE8CfjcqF?origin=lprLink" },
+              { name: "Diseño gráfico digital", icon: "bi-vector-pen", url: "https://forms.cloud.microsoft/r/DaHyfcynkW?origin=lprLink" },
+              { name: "Diseño de la Imagen", icon: "bi-image", url: "https://forms.cloud.microsoft/r/aUbhZJNe8a?origin=lprLink" },
+              { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/7w8if68HZN?origin=lprLink" }
             ]
           },
           {
             name: "10-D",
             subareas: [
-              { name: "Principios y técnicas de diseño gráfico", icon: "bi-brush", url: "" },
-              { name: "Diseño gráfico digital", icon: "bi-vector-pen", url: "" },
-              { name: "Diseño de la Imagen", icon: "bi-image", url: "" },
-              { name: "TICs", icon: "bi-pc-display", url: "" }
+              { name: "Principios y técnicas de diseño gráfico", icon: "bi-brush", url: "https://forms.cloud.microsoft/r/6ySGvwsM7R?origin=lprLink" },
+              { name: "Diseño gráfico digital", icon: "bi-vector-pen", url: "https://forms.cloud.microsoft/r/YypSSUD1fq?origin=lprLink" },
+              { name: "Diseño de la Imagen", icon: "bi-image", url: "https://forms.cloud.microsoft/r/ePuN48FLtq?origin=lprLink" },
+              { name: "TICs", icon: "bi-pc-display", url: "https://forms.cloud.microsoft/r/7w8if68HZN?origin=lprLink" }
             ]
           }
         ]
