@@ -73,7 +73,7 @@ const examConfig = {
         name: "Décimo",
         subareas: [
           { name: "Compras", icon: "bi-cart-check", url: "https://forms.cloud.microsoft/r/N2yK46nmKZ?origin=lprLink" },
-          { name: "Importaciones y Exportaciones", icon: "bi-globe2", url: "https://forms.cloud.microsoft/r/Ym8RRQw0yT?origin=lprLink" },
+          { name: "Importaciones y Exportaciones", icon: "bi-globe2", url: "https://forms.cloud.microsoft/r/KGUJxxJ2n5?origin=lprLink" },
           { name: "Logística", icon: "bi-truck", url: "https://forms.cloud.microsoft/r/Ym8RRQw0yT?origin=lprLink" }
         ]
       },
