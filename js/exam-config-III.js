@@ -18,7 +18,7 @@
  * ================================================================
  */
 
-const examConfig = {
+/*const examConfig = {
   electronica: {
     name: "Electrónica Industrial",
     levels: {
@@ -231,3 +231,4 @@ const examConfig = {
     }
   }
 };
+*/
